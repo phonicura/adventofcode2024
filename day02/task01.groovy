@@ -31,9 +31,9 @@ while ((line = reader.readLine()) != null) {
   reports.add(report)
 }
 
-def safeCount = reports
+def result = reports
   .collect { isSafe(it) }
   .collect{ it.compareTo(false) }
   .sum()
 
-println(safeCount)
+println(result)

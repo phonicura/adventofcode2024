@@ -9,9 +9,9 @@ while ((line = reader.readLine()) != null) {
   pairs.add(pair)
 }
 
-def totalDistance = pairs
+def result = pairs
   .transpose().collect{ it.sort() }
   .transpose().collect{ Math.abs(it[0] - it[1]) }
   .sum()
 
-println(totalDistance)
+println(result)

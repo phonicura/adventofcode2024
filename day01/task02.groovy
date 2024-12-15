@@ -11,8 +11,8 @@ while ((line = reader.readLine()) != null) {
 
 def lists = pairs.transpose().collect{ it.sort() }
 
-def similarityScore = lists[0]
+def result = lists[0]
   .collect{ it * lists[1].count(it) }
   .sum()
 
-println(similarityScore)
+println(result)
